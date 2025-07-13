@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – Lions Empire Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #eee;
+      margin: 0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 3px solid gold;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: gold;
+      color: #0d0d0d;
+    }
+    main.container {
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+    main h1 {
+      color: gold;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: gold;
+      font-weight: 700;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    form {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      border: 2px solid gold;
+      max-width: 100%;
+      margin-top: 40px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: gold;
+      font-size: 1rem;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 14px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #eee;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    form input[type="text"]::placeholder,
+    form input[type="email"]::placeholder,
+    form textarea::placeholder {
+      color: #999;
+    }
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form select:focus,
+    form textarea:focus {
+      background-color: #555;
+      outline: none;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    form input[type="submit"] {
+      background-color: gold;
+      border: none;
+      padding: 15px 25px;
+      color: #0d0d0d;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+      letter-spacing: 0.05em;
+    }
+    form input[type="submit"]:hover {
+      background-color: #ffd700cc;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      border-top: 3px solid gold;
+      padding: 20px 0;
+      color: gold;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 8px 12px;
+      }
+      main.container {
+        margin: 30px 15px 50px 15px;
+        padding: 0 10px;
+      }
+      main h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="services.html">Services</a>
+  <a href="ExploreOurMovie.html">Explore Films</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+  <h1>Who We Are</h1>
+
+  <div class="section">
+    <strong>Creative &amp; Cinematic Storytelling</strong>
+    <p>We are a powerful force in filmmaking — blending visuals, emotion, and truth. At Lions Empire Media, we create films that touch hearts and spark thought, with full dedication to storytelling excellence.</p>
+  </div>
+
+  <div class="section">
+    <strong>Passionate &amp; Skilled Team</strong>
+    <p>Our team is made up of passionate filmmakers, editors, camera operators, and creatives with a background in both Computer Science and Television Production. We believe every frame must matter.</p>
+  </div>
+
+  <div class="section">
+    <strong>Technology Meets Vision</strong>
+    <p>With a strong foundation in computing and access to advanced video equipment, sound, lighting, and editing software, we bring professional-grade results that rival major studios — at local rates.</p>
+  </div>
+
+  <div class="section">
+    <strong>Work With Us</strong>
+    <p>Whether you're a writer, actor, editor, director, lighting expert — or someone with passion to join film — we want to work with you. Fill out the form below and become part of our vision.</p>
+  </div>
+
+  <form action="https://formsubmit.co/lionsempiremedia@gmail.com" method="POST" autocomplete="off">
+    <label for="name">Your Name *</label>
+    <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+
+    <label for="email">Your Email *</label>
+    <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+
+    <label for="request">What do you want?</label>
+    <select id="request" name="request" required>
+      <option value="">Select an option</option>
+      <option value="Apply to act in our films">Apply to act in our films</option>
+      <option value="Request video production service">Request video production service</option>
+      <option value="Join as editor/director/crew">Join as editor/director/crew</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write more details..."></textarea>
+
+    <input type="submit" value="Send Now" />
+  </form>
+</main>
+
+<footer>
+  <p>lionsempiremedia@gmail.com | 076 579 4485</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahuna Tshiphiri – Lions Empire Media</title>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background: #222;
+      padding: 20px 0;
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: gold;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 20px;
+    }
+    .video-section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 15px gold;
+    }
+    .like-view {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding: 10px;
+      background: #1a1a1a;
+      border: 1px solid gold;
+      border-radius: 8px;
+    }
+    .like-view button {
+      background: gold;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #like-count, #view-count {
+      font-weight: bold;
+    }
+    .subscribe-form {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .subscribe-form input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+    }
+    .subscribe-form button {
+      background: gold;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: gold;
+      background: #222;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore Films</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ahuna Tshiphiri</h1>
+
+    <div class="video-section">
+      <h2>🎬 Trailer</h2>
+      <iframe src="https://www.youtube.com/embed/wQEbEkGoUSk" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-section">
+      <h2>🎥 Full Movie</h2>
+      <iframe src="https://www.youtube.com/embed/30VNglgXAS0" allowfullscreen></iframe>
+    </div>
+
+    <div class="like-view">
+      <div>👁 Views: <span id="view-count">Loading...</span></div>
+      <div>👍 <button onclick="addLike()">Like</button> <span id="like-count">0</span></div>
+    </div>
+
+    <div id="disqus_thread" style="margin-top: 50px;"></div>
+
+    <div class="subscribe-form">
+      <h2>📩 Subscribe to Our Updates</h2>
+      <form action="https://formspree.io/f/mnqeknkn" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Contact us: lionsempiremedia@gmail.com | 076 579 4485</p>
+  </footer>
+
+  <!-- Disqus JS -->
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = 'ahuna-tshiphiri';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://lionsempiremedia.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <!-- CountAPI for Views -->
+  <script>
+    fetch('https://api.countapi.xyz/hit/lionsempiremedia/ahuna-tshiphiri')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('view-count').innerText = data.value;
+      });
+  </script>
+
+  <!-- Like Button (Local) -->
+  <script>
+    let likes = localStorage.getItem('likes_ahuna') || 0;
+    document.getElementById('like-count').innerText = likes;
+
+    function addLike() {
+      likes++;
+      localStorage.setItem('likes_ahuna', likes);
+      document.getElementById('like-count').innerText = likes;
+    }
+  </script>
+</body>
+</html>

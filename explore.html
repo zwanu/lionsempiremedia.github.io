@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Explore Our Films - Lions Empire Media</title>
+<style>
+  body { background: #121212; color: #eee; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+  header { background: #222; padding: 20px; text-align: center; color: gold; }
+  nav a { color: gold; margin: 0 15px; text-decoration: none; font-weight: bold; }
+  nav a:hover { text-decoration: underline; }
+  h1 { margin-bottom: 30px; }
+  .movie-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 25px; }
+  .movie-card { background: #222; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px gold; cursor: pointer; transition: transform 0.2s; }
+  .movie-card:hover { transform: scale(1.05); }
+  .movie-thumb { width: 100%; height: 150px; object-fit: cover; }
+  .movie-title { padding: 15px; text-align: center; font-size: 1.2rem; color: gold; }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="explore.html">Explore Films</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <h1>Explore Our Films</h1>
+</header>
+
+<div class="movie-grid">
+  <!-- Repeat this block for each movie -->
+  <a href="movie-ahuna-tshiphiri.html" class="movie-card">
+    <img src="https://img.youtube.com/vi/wQEbEkGoUSk/hqdefault.jpg" alt="Ahuna Tshiphiri Trailer" class="movie-thumb" />
+    <div class="movie-title">Ahuna Tshiphiri</div>
+  </a>
+
+  <a href="movie-triangle.html" class="movie-card">
+    <img src="https://img.youtube.com/vi/2yXNqwbg0RA/hqdefault.jpg" alt="Triangle Trailer" class="movie-thumb" />
+    <div class="movie-title">Triangle</div>
+  </a>
+
+  <a href="movie-strongbond.html" class="movie-card">
+    <img src="https://img.youtube.com/vi/XbMzVkYEzMs/hqdefault.jpg" alt="Strong Bond Trailer" class="movie-thumb" />
+    <div class="movie-title">Strong Bond</div>
+  </a>
+
+  <a href="movie-badleader.html" class="movie-card">
+    <img src="https://img.youtube.com/vi/a5W33Gq5KHI/hqdefault.jpg" alt="Bad Leader Trailer" class="movie-thumb" />
+    <div class="movie-title">Bad Leader</div>
+  </a>
+
+  <a href="movie-mulandu.html" class="movie-card">
+    <img src="https://img.youtube.com/vi/eDQDexzZykY/hqdefault.jpg" alt="Mulandu Trailer" class="movie-thumb" />
+    <div class="movie-title">Mulandu</div>
+  </a>
+
+  <!-- Add more movie cards below with the same structure -->
+</div>
+</body>
+</html>

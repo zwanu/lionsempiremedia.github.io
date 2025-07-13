@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strong Bond - Lions Empire Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 3px solid gold;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: gold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 15px 0 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: gold;
+      color: #0d0d0d;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: gold;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+    .video-section {
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    .label {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+    .interactions {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    .interactions button {
+      background: none;
+      border: 2px solid gold;
+      color: gold;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .interactions button:hover {
+      background-color: gold;
+      color: #0d0d0d;
+    }
+    #views {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    #comments-section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+    }
+    #comments-section h3 {
+      color: gold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    #comments-list {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 15px;
+      padding: 0 10px;
+    }
+    .comment {
+      border-bottom: 1px solid #444;
+      padding: 8px 0;
+    }
+    .comment strong {
+      color: gold;
+    }
+    #comment-form textarea {
+      width: 100%;
+      resize: vertical;
+      height: 70px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    #comment-form button {
+      display: block;
+      background-color: gold;
+      border: none;
+      color: #0d0d0d;
+      padding: 10px 25px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+      margin: 0 auto;
+      transition: background-color 0.3s;
+    }
+    #comment-form button:hover {
+      background-color: #e6b800;
+    }
+    #subscribe-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    #subscribe-section input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      max-width: 80%;
+      font-size: 1rem;
+      border-radius: 6px 0 0 6px;
+      border: none;
+      outline: none;
+    }
+    #subscribe-section button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 0 6px 6px 0;
+      border: none;
+      background-color: gold;
+      color: #0d0d0d;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    #subscribe-section button:hover {
+      background-color: #e6b800;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lions Empire Media</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="ExploreOurMovie.html" class="active">Explore</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Strong Bond</h2>
+
+    <div class="video-section">
+      <div class="label">🎬 Watch the Trailer:</div>
+      <iframe src="https://www.youtube.com/embed/XbMzVkYEzMs" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-section">
+      <div class="label">🎥 Watch the Full Movie:</div>
+      <iframe src="https://www.youtube.com/embed/1XnyiqVt_5k" allowfullscreen></iframe>
+    </div>
+
+    <div id="views">Views: <span id="viewCount">0</span></div>
+
+    <div class="interactions">
+      <button id="likeBtn">👍 Like (<span id="likeCount">0</span>)</button>
+      <button id="dislikeBtn">👎 Dislike (<span id="dislikeCount">0</span>)</button>
+    </div>
+
+    <div id="comments-section">
+      <h3>Comments</h3>
+      <div id="comments-list"></div>
+      <form id="comment-form">
+        <textarea id="commentInput" placeholder="Write a comment..." required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </div>
+
+    <div id="subscribe-section">
+      <h3>Subscribe to Lions Empire Media</h3>
+      <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+      <button id="subscribeBtn">Subscribe</button>
+      <p id="subscribeMsg"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us: lionsempiremedia@gmail.com | 076 579 4485</p>
+  </footer>
+
+<script>
+  // Simple in-page storage for demo purposes only.
+  // For real use, you must implement a backend/database.
+
+  // View counter (increments once per page load)
+  const viewCountSpan = document.getElementById('viewCount');
+  let views = localStorage.getItem('strongbondViews') || 0;
+  views++;
+  localStorage.setItem('strongbondViews', views);
+  viewCountSpan.textContent = views;
+
+  // Likes and dislikes
+  const likeBtn = document.getElementById('likeBtn');
+  const dislikeBtn = document.getElementById('dislikeBtn');
+  const likeCountSpan = document.getElementById('likeCount');
+  const dislikeCountSpan = document.getElementById('dislikeCount');
+
+  let likes = parseInt(localStorage.getItem('strongbondLikes')) || 0;
+  let dislikes = parseInt(localStorage.getItem('strongbondDislikes')) || 0;
+  likeCountSpan.textContent = likes;
+  dislikeCountSpan.textContent = dislikes;
+
+  likeBtn.addEventListener('click', () => {
+    likes++;
+    localStorage.setItem('strongbondLikes', likes);
+    likeCountSpan.textContent = likes;
+  });
+
+  dislikeBtn.addEventListener('click', () => {
+    dislikes++;
+    localStorage.setItem('strongbondDislikes', dislikes);
+    dislikeCountSpan.textContent = dislikes;
+  });
+
+  // Comments system
+  const commentsList = document.getElementById('comments-list');
+  const commentForm = document.getElementById('comment-form');
+  const commentInput = document.getElementById('commentInput');
+
+  function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('strongbondComments')) || [];
+    commentsList.innerHTML = '';
+    comments.forEach((comment) => {
+      const div = document.createElement('div');
+      div.classList.add('comment');
+      div.innerHTML = `<strong>User:</strong> ${comment}`;
+      commentsList.appendChild(div);
+    });
+  }
+
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const comment = commentInput.value.trim();
+    if(comment) {
+      const comments = JSON.parse(localStorage.getItem('strongbondComments')) || [];
+      comments.push(comment);
+      localStorage.setItem('strongbondComments', JSON.stringify(comments));
+      commentInput.value = '';
+      loadComments();
+    }
+  });
+
+  loadComments();
+
+  // Subscribe system (demo only)
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  const subscribeEmail = document.getElementById('subscribeEmail');
+  const subscribeMsg = document.getElementById('subscribeMsg');
+
+  subscribeBtn.addEventListener('click', () => {
+    const email = subscribeEmail.value.trim();
+    if(email) {
+      // For demo, we just show a message.
+      subscribeMsg.style.color = 'lightgreen';
+      subscribeMsg.textContent = `Subscribed with ${email}. Thank you!`;
+      subscribeEmail.value = '';
+    } else {
+      subscribeMsg.style.color = 'red';
+      subscribeMsg.textContent = 'Please enter a valid email.';
+    }
+  });
+</script>
+
+</body>
+</html>
